@@ -95,7 +95,7 @@ const AddOrUpdateExamComponent = () => {
                     <label className="form-label" for="examDate">
                        Exam Date
                     </label>
-                    <input type="text" id="examDate" className="form-control" value={examDate}
+                    <input type="date" id="examDate" className="form-control" value={examDate}
                         onChange={(e) => setExamDate(e.target.value)} />
                 </div>
 
