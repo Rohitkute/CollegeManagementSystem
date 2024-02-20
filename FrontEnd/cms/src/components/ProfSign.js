@@ -17,6 +17,15 @@ export default function(props)
               </tr>
 
               <tr className="form-group mt-3">
+                <td>Last Name</td>
+                <input
+                  type="text"
+                  className="form-control mt-1"
+                  placeholder="Enter Your First Name"
+                />
+              </tr>
+
+              <tr className="form-group mt-3">
                 <td>Username Name</td>
                 <input
                   type="text"

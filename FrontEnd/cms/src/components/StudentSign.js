@@ -17,16 +17,16 @@ export default function(props)
               </tr>
 
               <tr className="form-group mt-3">
-                <td>Last Name</td>
+                <td>Email</td>
                 <input
-                  type="text"
+                  type="email"
                   className="form-control mt-1"
                   placeholder="Enter Your Last Name"
                 />
               </tr>
 
               <tr className="form-group mt-3">
-                <td>Username Name</td>
+                <td>Username</td>
                 <input
                   type="text"
                   className="form-control mt-1"
@@ -35,16 +35,16 @@ export default function(props)
               </tr>
 
               <tr className="form-group mt-3">
-                <td>Date Of Birth</td>
+                <td>Password</td>
                 <input
-                  type="date"
+                  type="password"
                   className="form-control mt-1"
                   placeholder="Enter Your Username Name"
                 />
               </tr>
 
               <tr className="form-group mt-3">
-                <td>Contact</td>
+                <td>Address</td>
                 <input
                   type="number"
                   className="form-control mt-1"
@@ -54,15 +54,15 @@ export default function(props)
 
 
               <tr className="form-group mt-3">
-                <td>Email address</td>
+                <td>Contact</td>
                 <input
-                  type="email"
+                  type="text"
                   className="form-control mt-1"
                   placeholder="Email Address"
                 />
               </tr>
 
-              <tr className="form-group mt-3">
+              {/* <tr className="form-group mt-3">
                 <td>City</td>
                 <input
                   type="text"
@@ -87,7 +87,7 @@ export default function(props)
                   className="form-control mt-1"
                   placeholder="Password"
                 />
-              </tr>
+              </tr> */}
 
               <div className="d-grid gap-2 mt-3">
                 <button type="submit" className="btn btn-primary">
