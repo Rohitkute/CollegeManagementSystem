@@ -17,6 +17,8 @@ import ListProfessorComponent from "./components/professor/ListProfessorComponen
 import AddOrUpdateProfessorComponent from "./components/professor/AddOrUpdateProfessorComponent"
 import ListStudentComponent from "./components/student/ListStudentComponent"
 import AddOrUpdateStudentComponent from "./components/student/AddOrUpdateStudentComponent"
+import ListSubjectComponent from "./components/subject/ListSubjectComponent"
+import AddOrUpdateSubjectComponent from "./components/subject/AddOrUpdateSubjectComponent"
 ///Rohit
 function App() {
   return (
@@ -45,6 +47,10 @@ function App() {
         <Route path="/students" element={<ListStudentComponent/>}/>
         <Route path="/add-student" element={<AddOrUpdateStudentComponent/>}/>
         <Route path="/edit-student/:id" element={<AddOrUpdateStudentComponent/>}/>
+        {/* Subject Routing */}
+        <Route path="/subjects" element={<ListSubjectComponent/>}/>
+        <Route path="/add-subject" element={<AddOrUpdateSubjectComponent/>}/>
+        <Route path="/edit-subject/:id" element={<AddOrUpdateSubjectComponent/>}/>
       </Routes>
     </BrowserRouter>
   )
