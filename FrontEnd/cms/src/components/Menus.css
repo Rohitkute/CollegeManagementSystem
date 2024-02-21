@@ -1,0 +1,15 @@
+.menu-list {
+    width: 200px; /* Adjust the width as needed */
+    background-color: #f8f9fa; /* Set the background color */
+    border-right: 1px solid #dee2e6; /* Add a border to separate from the content */
+    padding-top: 20px; /* Add some top padding */
+  }
+  
+  .menu-list a {
+    color: #343a40; /* Set the text color */
+  }
+  
+  .menu-list a:hover {
+    background-color: #e9ecef; /* Change background color on hover */
+  }
+  
