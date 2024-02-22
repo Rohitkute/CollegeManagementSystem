@@ -1,54 +1,73 @@
-package com.collegemanagementsystem.entities;
+package com.example.project.Entities;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
+@Table(name = "course")
 public class Course {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long courseId;
-	@Column(length = 30,unique = true)
-	private String courseName;
-	@Column
-	private String description;
-	
-	@OneToMany(mappedBy = "course", cascade = CascadeType.ALL,orphanRemoval = true)
-	private List<Student> students = new ArrayList<Student>();
-	
-	@ManyToOne(fetch = FetchType.EAGER )
-	@JoinColumn(name="department_id")
-	private Department department;
-	
-	//helper methods
-	public void addStudent(Student s) {
-		students.add(s);
-		s.setCourse(this);
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "course_id")
+    private int courseId;
 
-	public void removeStudent(Student s) {
-		students.remove(s);
-		s.setCourse(null);
-	}
+    @Column(name = "course_code")
+    private String courseCode;
+
+    @Column(name = "title")
+    private String title;
+
+    @Column(name = "description")
+    private String description;
+
+    public Course() {
+        // Default constructor
+    }
+
+    public Course(String courseCode, String title, String description) {
+        this.courseCode = courseCode;
+        this.title = title;
+        this.description = description;
+    }
+
+    public int getCourseId() {
+        return courseId;
+    }
+
+    public void setCourseId(int courseId) {
+        this.courseId = courseId;
+    }
+
+    public String getCourseCode() {
+        return courseCode;
+    }
+
+    public void setCourseCode(String courseCode) {
+        this.courseCode = courseCode;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return "Course [courseId=" + courseId + ", courseCode=" + courseCode + ", title=" + title + ", description=" + description + "]";
+    }
 }
