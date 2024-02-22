@@ -1,25 +1,52 @@
-export default function StudentHome()
-{
-    return(
-        <div>Studet Home</div>
-    //   <div className="row">
-    //     <div></div> className="col">
-    //       < className="mb-3 border bg-light rounded p-2">
-    //         <label htmlFor="address1" className="form-label">
-    //           State
-    //         </label>
-    //         <select
-    //           className="form-select"
-    //           value={selectedState}
-    //           onChange={(e) => handleChange("state", e.target.value)}
-    //           onBlur={(e) => handleChange("state", e.target.value)}
-    //         >
-    //           <option value="">Select State</option>
-    //           <option value="Maharastra">Maharastra</option>
-    //           <option value="Bihar">Bihar</option>
-    //           <option value="Kerala">Kerala</option>
-    //         </select>
+import React, { useState } from 'react';
 
-    //     </div>
-    )
-}
+const Dropdown = () => {
+  const [selectedOption, setSelectedOption] = useState('');
+
+  const handleChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
+
+  return (
+    <div>
+    <tr>
+        <td>
+            <select value={selectedOption} onChange={handleChange}>
+                <option value="">Select an option</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+            </select>
+            <p>Selected option: {selectedOption}</p>
+        </td>
+        <td>
+      <select value={selectedOption} onChange={handleChange}>
+        <option value="">Select an option</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+      <p>Selected option: {selectedOption}</p>
+      </td>
+
+      <select value={selectedOption} onChange={handleChange}>
+        <option value="">Select an option</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+      <p>Selected option: {selectedOption}</p>
+
+      <select value={selectedOption} onChange={handleChange}>
+        <option value="">Select an option</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+      <p>Selected option: {selectedOption}</p>
+      </tr>
+    </div>
+  );
+};
+
+export default Dropdown;

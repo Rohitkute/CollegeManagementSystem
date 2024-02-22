@@ -28,6 +28,7 @@ const AddOrUpdateExamComponent = () => {
     }
   
     else{
+        alert("something is wrong!");
         ExamService.addExam(exam).then((response)=>{console.log(response.data)
             navigate("/exams")}).catch(error => {console.log(error);})
     }

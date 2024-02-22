@@ -26,6 +26,7 @@ const AddOrUpdateSubjectComponent = () => {
     }
   
     else{
+        alert("Something is wrong!");
         SubjectService.addSubject(subject).then((response)=>{console.log(response.data)
             navigate("/subjects")}).catch(error => {console.log(error);})
     }

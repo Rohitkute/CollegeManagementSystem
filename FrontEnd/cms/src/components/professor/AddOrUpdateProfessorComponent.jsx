@@ -46,6 +46,7 @@ const AddOrUpdateProfessor = () => {
     }
   
     else{
+        alert("Something is wrong!");
         ProfessorService.addProfessor(professor).then((response)=>{console.log(response.data)
         navigate("/professors")}).catch(error => {console.log(error);})
     }

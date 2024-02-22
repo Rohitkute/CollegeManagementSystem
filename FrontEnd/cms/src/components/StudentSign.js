@@ -8,7 +8,7 @@ export default function(props)
               <h3 className="Auth-form-title">Student Registration</h3>
               
               <tr className="form-group mt-3">
-                <td>First Name</td>
+                <td>FirstName</td>
                 <input
                   type="text"
                   className="form-control mt-1"
@@ -17,7 +17,16 @@ export default function(props)
               </tr>
 
               <tr className="form-group mt-3">
-                <td>Email</td>
+                <td>LastName</td>
+                <input
+                  type="text"
+                  className="form-control mt-1"
+                  placeholder="Enter Your First Name"
+                />
+              </tr>
+
+              <tr className="form-group mt-3">
+                <td>Date Of Birth</td>
                 <input
                   type="email"
                   className="form-control mt-1"

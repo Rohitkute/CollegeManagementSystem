@@ -29,6 +29,7 @@ const AddOrUpdateStudentComponent = () => {
         }
 
         else {
+            alert("Somthing is wrong! ");
             StudentService.addStudent(student).then((response) => {
                 console.log(response.data)
                 navigate("/students")

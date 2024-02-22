@@ -38,6 +38,7 @@ const AddDepartmentComponent = () => {
     }
   
     else{
+        alert("Something is wrong!");
         DepartmentService.addDepartment(department).then((response)=>{console.log(response.data)
         navigate("/departments")}).catch(error => {console.log(error);})
     }

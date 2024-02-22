@@ -46,12 +46,12 @@ const Home = () => {
                 ></div>
               </li>
 
-              <li class="nav-item">
+              {/* <li class="nav-item">
                 <a
                   class="nav-link navbar-brand"
                   style={{ color: "blue" }}
                   aria-current="page"
-                  href="/StudentSign"
+                  href="/students"
                   onMouseOver={() => {
                     setFlag1(true);
                   }}
@@ -96,7 +96,7 @@ const Home = () => {
                     borderRadius: "5%",
                   }}
                 ></div>
-              </li>
+              </li> */}
 
 
 

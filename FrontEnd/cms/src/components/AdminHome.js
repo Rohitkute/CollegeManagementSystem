@@ -14,7 +14,7 @@ const HomePageComponent = () => {
 
     return (
         <div>
-            <div>
+            <div>                
                 <p>Hello {student.name}</p>
             </div>
 
